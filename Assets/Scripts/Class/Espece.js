@@ -23,4 +23,9 @@
 		this.BSpeed = BSpeed;
 		this.nameOfEspece = nameOfEspece;
 	}
+	
+	public function ToString():String
+	{
+		return ("(" + nameOfEspece + type1.nameOfType + type2.nameOfType + "[" + BPV + BAtt + BAttS + BDef + BDefS + BSpeed + "]" + ")");
+	}
 }
