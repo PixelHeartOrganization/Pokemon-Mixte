@@ -113,4 +113,21 @@
 		if (level > 101 || level < 1) isHacked = true;
 		else isHacked = false;
 	}
+	
+	
+	
+	public function EVToString():String
+	{
+		return ("[" + EPV + EAtt + EAttS + EDef + EDefS + ESpeed + "]");
+	}
+	
+	public function IVToString():String
+	{
+		return ("[" + IPV + IAtt + IAttS + IDef + IDefS + ISpeed + "]");
+	}
+	
+	public function ToString():String
+	{
+		return ("(" + surname + "lv + xp: " + level + " " + exp + "EV: " + EVToString + "IV: " + IVToString + espece.ToString + ")");
+	}
 }
