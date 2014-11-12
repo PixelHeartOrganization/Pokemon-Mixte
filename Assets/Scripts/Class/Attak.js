@@ -31,6 +31,30 @@
 		
 		if (move.type == first.espece.type1 || move.type == first.espece.type2) modifier *= 1.5;
 		
+		if (move.type.id == second.espece.type1.firstFaiblesse) modifier *= 2;
+		if (move.type.id == second.espece.type1.secondFaiblesse) modifier *= 2;
+		if (move.type.id == second.espece.type1.thirdFaiblesse) modifier *= 2;
+		if (move.type.id == second.espece.type1.fourthFaiblesse) modifier *= 2;
+		if (move.type.id == second.espece.type1.fifthFaiblesse) modifier *= 2;
+		
+		if (move.type.id == second.espece.type2.firstFaiblesse) modifier *= 2;
+		if (move.type.id == second.espece.type2.secondFaiblesse) modifier *= 2;
+		if (move.type.id == second.espece.type2.thirdFaiblesse) modifier *= 2;
+		if (move.type.id == second.espece.type2.fourthFaiblesse) modifier *= 2;
+		if (move.type.id == second.espece.type2.fifthFaiblesse) modifier *= 2;
+		
+		if (move.type.id == second.espece.type1.firstResistance) modifier /= 2;
+		if (move.type.id == second.espece.type1.secondResistance) modifier /= 2;
+		if (move.type.id == second.espece.type1.thirdResistance) modifier /= 2;
+		if (move.type.id == second.espece.type1.fourthResistance) modifier /= 2;
+		if (move.type.id == second.espece.type1.fifthResistancee) modifier /= 2;
+		
+		if (move.type.id == second.espece.type2.firstResistance) modifier /= 2;
+		if (move.type.id == second.espece.type2.secondResistance) modifier /= 2;
+		if (move.type.id == second.espece.type2.thirdResistance) modifier /= 2;
+		if (move.type.id == second.espece.type2.fourthResistance) modifier /= 2;
+		if (move.type.id == second.espece.type2.fifthResistance) modifier /= 2;
+		
 		modifier *= rand;
 		
 		if (move.pss == 0){ att = first.Att; def = second.Def;}
