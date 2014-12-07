@@ -3,6 +3,20 @@
 	var id:int;
 	var nameOfType:String;
 	
+	//Faiblesses
+	var firstFaiblesse:int;
+	var secondFaiblesse:int;
+	var thirdFaiblesse:int;
+	var fourthFaiblesse:int;
+	var fifthFaiblesse:int;
+	
+	//Resistance
+	var firstResistance:int;
+	var secondResistance:int;
+	var thirdResistance:int;
+	var fourthResistance:int;
+	var fifthResistance:int;
+	
 	public function Type (id:int, nameOfType:String)
 	{
 		this.id = id;
@@ -20,11 +34,11 @@
 	
 	public function RemoveFaiblesse (place:int)
 	{
-		if (place == 0) firstFaiblesse = null;
-		if (place == 1) secondFaiblesse = null;
-		if (place == 2) thirdFaiblesse = null;
-		if (place == 3) fourthFaiblesse = null;
-		if (place == 4) fifthFaiblesse = null;
+		if (place == 0) firstFaiblesse = -1;
+		if (place == 1) secondFaiblesse = -1;
+		if (place == 2) thirdFaiblesse = -1;
+		if (place == 3) fourthFaiblesse = -1;
+		if (place == 4) fifthFaiblesse = -1;
 	}
 	
 	public function AddResistance (resistance:int, place:int)
@@ -38,10 +52,11 @@
 	
 	public function RemoveResistance (place:int)
 	{
-		if (place == 0) firstResistance = null;
-		if (place == 1) secondResistance = null;
-		if (place == 2) thirdResistance = null;
-		if (place == 3) fourthResistance = null;
-		if (place == 4) fifthResistance = null;
+		if (place == 0) firstResistance = -1;
+		if (place == 1) secondResistance = -1;
+		if (place == 2) thirdResistance = -1;
+		if (place == 3) fourthResistance = -1;
+		if (place == 4) fifthResistance = -1;
 	}
+	
 }

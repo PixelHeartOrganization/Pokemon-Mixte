@@ -4,6 +4,9 @@
 	var type2:Type;
 	var nameOfEspece:String;
 	
+	var texturePath:String;
+	var objectPath:String;
+	
 	var BPV:int;
 	var BAtt:int;
 	var BAttS:int;
@@ -22,6 +25,8 @@
 		this.BDefS = BDefS;
 		this.BSpeed = BSpeed;
 		this.nameOfEspece = nameOfEspece;
+		this.texturePath = "Assets/Textures/Espece/min/" + nameOfEspece + ".png";
+		this.objectPath = "Assets/Models/Espece/" + nameOfEspece + ".png";
 	}
 	
 	public function ToString():String

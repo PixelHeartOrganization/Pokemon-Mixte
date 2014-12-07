@@ -39,6 +39,13 @@
 	var DefS:int;
 	var Speed:int;
 	
+	//Stats Contest
+	var cool:int;
+	var beauty:int;
+	var cute:int;
+	var smart:int;
+	var tought:int;
+	
 	public function Pokemon (espece:Espece, EPV:int, EAtt:int, EAttS:int, EDef:int, EDefS:int, ESpeed:int, IPV:int, IAtt:int, IAttS:int, IDef:int, IDefS:int, ISpeed:int, level:int, surname:String, nature:Nature)
 	{
 		this.espece = espece;
@@ -68,6 +75,11 @@
 		this.DefS = ToStats(level, EDefS, IDefS, espece.BDefS, false, nature.defsi);
 		this.Speed = ToStats(level, ESpeed, ISpeed, espece.BSpeed, false, nature.speedi);
 		
+		this.firstAttak = null;
+		this.secondAttak = null;
+		this.thirdAttak = null;
+		this.fourthAttak = null;
+	
 		PVU = PV;
 		
 		VerifyHacked();
@@ -99,6 +111,15 @@
 		if (place == 3) fourthAttak = null;
 	}
 	
+	public function setContestStats(cool:int, beaut:int, cute:int, smart:int, tought:int)
+	{
+		this.cool = cool;
+		this.beaut = beaut;
+		this.cute = cute;
+		this.smart = smart;
+		this.tought = tought;
+	}
+	
 	public function VerifyHacked ()
 	{
 		if (EPV > 255 || EAtt > 255 || EAttS > 255 || EDef > 255 || EDefS > 255 || ESpeed > 255) isHacked = true;
@@ -110,11 +131,12 @@
 		if ((EPV + EAtt + EAttS + EDef + EDefS + ESpeed) > 510) isHacked = true;
 		else isHacked = false;
 		
+		if (cool > 200 || smart > 200 || beauty > 200 || tought > 200 || cute > 200) isHacked = true;
+		else isHacked = false;
+		
 		if (level > 101 || level < 1) isHacked = true;
 		else isHacked = false;
 	}
-	
-	
 	
 	public function EVToString():String
 	{

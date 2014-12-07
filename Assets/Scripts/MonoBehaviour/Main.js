@@ -11,6 +11,7 @@ public static var Erunix:Espece;
 var texture:Texture2D;
 
 static var MyPocketMonster:Pokemon;
+static var MyPocketMonster2:Pokemon;
 
 var Null:Type;
 var Grass:Type;
@@ -68,6 +69,8 @@ function PRINT ()
 	
 	else
 	print("Surname:" + MyPocketMonster.surname + " PV:" + MyPocketMonster.PV + " Att:" + MyPocketMonster.Att + " Def:" +  MyPocketMonster.Def + " AttS:" + MyPocketMonster.AttS + " DefS:" + MyPocketMonster.DefS + " Speed:" + MyPocketMonster.Speed);
+	
+	//print("Damage: " + MyPocketMonster.firstAttak.ToDamages(MyPocketMonster, MyPocketMonster2, MyPocketMonster.firstAttak));
 }
 
 function Update ()
@@ -88,10 +91,18 @@ function InitEspece ()
 
 function InitPokemon ()
 {
-	MyPocketMonster = Pokemon(Erunix, 0, 252, 0, 4, 0, 252, 31, 31, 31, 31, 31, 31, 12, "Lucas", Jolly);
-	MyPocketMonster.AddAttak(Fissure, 0);
-	Fight.first = MyPocketMonster;
-	Fight.second = MyPocketMonster;
+	MyPocketMonster = Pokemon(Erunix, 0, 252, 0, 4, 0, 252, 31, 31, 31, 31, 31, 31, 50, "Lucas", Jolly);
+	MyPocketMonster.AddAttak(Fissure, 50000);
+	
+	MyPocketMonster2 = Pokemon(Erunix, 0, 252, 0, 4, 0, 252, 31, 31, 31, 31, 31, 31, 50, "Lucas", Jolly);
+	MyPocketMonster2.AddAttak(Fissure, 50000);
+	
+	Fight.first1 = MyPocketMonster;
+	Fight.second2 = MyPocketMonster2;
+	
+	MyPocketMonster.PVU = MyPocketMonster.PV/2;
+	
+	Inventory.AddPokemonInInventory(MyPocketMonster, 0);
 }
 
 function InitType ()
@@ -137,7 +148,7 @@ function InitNature ()
 
 function InitAttak ()
 {
-	Fissure = Attak("Fissure", Ground, 0, 5000, 30, 5);
+	Fissure = Attak("Fissure", Ground, 0, 55555, 30, 5);
 }
 
 function OnGUI ()
