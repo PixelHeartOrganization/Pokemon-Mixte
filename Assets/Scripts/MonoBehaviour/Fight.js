@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿var style1:GUIStyle;
+=======
+var style1:GUIStyle;
+>>>>>>> origin/master
 var style2:GUIStyle;
 static var first1:Pokemon;
 static var second2:Pokemon;
@@ -36,7 +40,145 @@ function Start()
 	//first = Main.MyPocketMonster;
 	yield WaitForSeconds(0.1);
 	DamgeFunction();
+<<<<<<< HEAD
+=======
 }
+
+function ToDamages (first:Pokemon, second:Pokemon):int
+{
+	var damages:float;
+	var modifier:float = 1.0f;
+	var att:int = 0;
+	var def:int = 0;
+	var rand:float = Random.Range(0.85f, 1.0f);
+	
+	if (first.firstAttak != null)
+	{
+	if (first.firstAttak.type.id == first.espece.type1.id || first.firstAttak.type.id == first.espece.type2.id)
+		modifier *= 1.5f;
+	
+	if (first.firstAttak.type.id == second.espece.type1.firstFaiblesse)
+		modifier *= 2.0f;
+	
+	if (first.firstAttak.type.id == second.espece.type1.secondFaiblesse)
+		modifier *= 2.0f;
+	
+	if (first.firstAttak.type.id == second.espece.type1.thirdFaiblesse)
+		modifier *= 2.0f;
+	
+	if (first.firstAttak.type.id == second.espece.type1.fourthFaiblesse)
+		modifier *= 2.0f;
+	
+	if (first.firstAttak.type.id == second.espece.type1.fifthFaiblesse)
+		modifier *= 2.0f;
+	
+///////////////////////////////////////////////////////////////////////////////////////
+	
+	if (first.firstAttak.type.id == second.espece.type2.firstFaiblesse)
+		modifier *= 2.0f;
+	
+	if (first.firstAttak.type.id == second.espece.type2.secondFaiblesse)
+		modifier *= 2.0f;
+	
+	if (first.firstAttak.type.id == second.espece.type2.thirdFaiblesse)
+		modifier *= 2.0f;
+	
+	if (first.firstAttak.type.id == second.espece.type2.fourthFaiblesse)
+		modifier *= 2.0f;
+	
+	if (first.firstAttak.type.id == second.espece.type2.fifthFaiblesse)
+		modifier *= 2.0f;
+	
+///////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+
+	if (first.firstAttak.type.id == second.espece.type1.firstResistance)
+		modifier /= 2.0f;
+	
+	if (first.firstAttak.type.id == second.espece.type1.secondResistance)
+		modifier /= 2.0f;
+	
+	if (first.firstAttak.type.id == second.espece.type1.thirdResistance)
+		modifier /= 2.0f;
+	
+	if (first.firstAttak.type.id == second.espece.type1.fourthResistance)
+		modifier /= 2.0f;
+	
+	if (first.firstAttak.type.id == second.espece.type1.fifthResistance)
+		modifier /= 2.0f;
+		
+//////////////////////////////////////////////////////////////////////////////////////
+		
+	if (first.firstAttak.type.id == second.espece.type2.firstResistance)
+		modifier /= 2.0f;
+	
+	if (first.firstAttak.type.id == second.espece.type2.secondResistance)
+		modifier /= 2.0f;
+	
+	if (first.firstAttak.type.id == second.espece.type2.thirdResistance)
+		modifier /= 2.0f;
+	
+	if (first.firstAttak.type.id == second.espece.type2.fourthResistance)
+		modifier /= 2.0f;
+	
+	if (first.firstAttak.type.id == second.espece.type2.fifthResistance)
+		modifier /= 2.0f;
+	}
+		
+	if (first.firstAttak.pss == 0){ att = first.Att; def = second.Def;}
+	if (first.firstAttak.pss == 1){ att = first.AttS; def = second.DefS;}
+	
+	damages = (((2 * first.level + 10) / 250) * (att / def) * first.firstAttak.puissance + 2) * modifier * rand;
+	
+	return damages;
+>>>>>>> origin/master
+}
+	
+/*function ToDamages (first:Pokemon, second:Pokemon):int
+{
+	/*var damages:float;
+	
+	var att:int;
+	var def:int;
+	
+	var modifier:float = 1.0f;
+	var rand:float = Random.Range(0.85f, 1.0f);
+	
+	if (first.firstAttak.type == first.espece.type1 || first.firstAttak.type == first.espece.type2)/* modifier *= 1.5;
+	
+	if (first.firstAttak.type.id == second.espece.type1.firstFaiblesse) modifier *= 2f;
+	if (first.firstAttak.type.id == second.espece.type1.secondFaiblesse) modifier *= 2f;
+	if (first.firstAttak.type.id == second.espece.type1.thirdFaiblesse) modifier *= 2f;
+	if (first.firstAttak.type.id == second.espece.type1.fourthFaiblesse) modifier *= 2f;
+	if (first.firstAttak.type.id == second.espece.type1.fifthFaiblesse) modifier *= 2f;
+	
+	if (first.firstAttak.type.id == second.espece.type2.firstFaiblesse) modifier *= 2f;
+	if (first.firstAttak.type.id == second.espece.type2.secondFaiblesse) modifier *= 2f;
+	if (first.firstAttak.type.id == second.espece.type2.thirdFaiblesse) modifier *= 2f;
+	if (first.firstAttak.type.id == second.espece.type2.fourthFaiblesse) modifier *= 2f;
+	if (first.firstAttak.type.id == second.espece.type2.fifthFaiblesse) modifier *= 2f;
+	
+	if (first.firstAttak.type.id == second.espece.type1.firstResistance) modifier /= 2f;
+	if (first.firstAttak.type.id == second.espece.type1.secondResistance) modifier /= 2f;
+	if (first.firstAttak.type.id == second.espece.type1.thirdResistance) modifier /= 2f;
+	if (first.firstAttak.type.id == second.espece.type1.fourthResistance) modifier /= 2f;
+	if (first.firstAttak.type.id == second.espece.type1.fifthResistancee) modifier /= 2f;
+	
+	if (first.firstAttak.type.id == second.espece.type2.firstResistance) modifier /= 2f;
+	if (first.firstAttak.type.id == second.espece.type2.secondResistance) modifier /= 2f;
+	if (first.firstAttak.type.id == second.espece.type2.thirdResistance) modifier /= 2f;
+	if (first.firstAttak.type.id == second.espece.type2.fourthResistance) modifier /= 2f;
+	if (first.firstAttak.type.id == second.espece.type2.fifthResistance) modifier /= 2f;
+	
+	modifier *= rand;
+	
+	if (first.firstAttak.pss == 0){ att = first.Att; def = second.Def;}
+	if (first.firstAttak.pss == 1){ att = first.AttS; def = second.DefS;}
+	
+	damages = (((2 * first.level + 10) / 250) * (att / def) * first.firstAttak.puissance + 2) * modifier;
+	
+	return damages;
+}*/
 
 function ToDamages (first:Pokemon, second:Pokemon):int
 {
@@ -211,6 +353,7 @@ function OnGUI ()
 	
 	GUI.Label(Rect(Screen.width/PosOfFirstBar.x + PosOfLevelLabels.x, Screen.height/PosOfFirstBar.y + PosOfLevelLabels.y, bar.width * SizeOfFirstBar, bar.height * SizeOfFirstBar), "lv " + pokemon.level, style2);
 	GUI.Label(Rect(Screen.width/PosOfSecondBar.x + PosOfLevelLabels.x, Screen.height/PosOfSecondBar.y + PosOfLevelLabels.y, bar.width * SizeOfSecondBar, bar.height * SizeOfSecondBar), "lv " + first1.level, style2);
+<<<<<<< HEAD
 	
 }
 
@@ -222,6 +365,19 @@ function RemovePV (test1:int, temp:float)
 		first.PVU --;
 	}*/
 	
+=======
+	
+}
+
+function RemovePV (test1:int, temp:float)
+{
+	/*while (first.PVU >= test1 && first.PVU > 0)
+	{
+		yield WaitForSeconds(temp);
+		first.PVU --;
+	}*/
+	
+>>>>>>> origin/master
 	var PVR = first1.PVU;
 	
 	while (first1.PVU > (PVR - test1) && first1.PVU > 0)
@@ -238,4 +394,8 @@ function AddPV (test1:int, temp:float)
 		yield WaitForSeconds(temp);
 		first1.PVU ++;
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master

@@ -1,4 +1,4 @@
-﻿class Attak
+class Attak
 {
 	var nameOfAttak:String;
 	var type:Type;
@@ -19,4 +19,8 @@
 		this.pp = pp;
 		this.ppU = pp;
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master

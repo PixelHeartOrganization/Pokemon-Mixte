@@ -58,5 +58,9 @@
 		if (place == 3) fourthResistance = -1;
 		if (place == 4) fifthResistance = -1;
 	}
+<<<<<<< HEAD
 	
 }
+=======
+}
+>>>>>>> origin/master
