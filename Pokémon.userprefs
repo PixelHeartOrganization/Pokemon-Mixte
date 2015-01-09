@@ -1,8 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\Project FPS Final\Assets\Script\ListOfGun.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Class\Pokemon.js">
     <Files>
-      <File FileName="..\Project FPS Final\Assets\Script\ListOfGun.js" Line="10" Column="32" />
+      <File FileName="Assets\Scripts\Class\Type.js" Line="37" Column="2" />
+      <File FileName="Assets\Scripts\MonoBehaviour\Fight.js" Line="47" Column="2" />
+      <File FileName="Assets\Scripts\Class\Pokemon.js" Line="9" Column="20" />
+      <File FileName="Assets\Scripts\Class\Attak.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MonoBehaviour\Main.js" Line="92" Column="39" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

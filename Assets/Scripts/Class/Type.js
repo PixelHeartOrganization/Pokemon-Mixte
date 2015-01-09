@@ -1,21 +1,21 @@
 ﻿class Type
 {
-	var id:int;
-	var nameOfType:String;
+	var id:int = -100;
+	var nameOfType:String = "";
 	
 	//Faiblesses
-	var firstFaiblesse:int;
-	var secondFaiblesse:int;
-	var thirdFaiblesse:int;
-	var fourthFaiblesse:int;
-	var fifthFaiblesse:int;
+	var firstFaiblesse:int = -100;
+	var secondFaiblesse:int = -100;
+	var thirdFaiblesse:int = -100;
+	var fourthFaiblesse:int = -100;
+	var fifthFaiblesse:int = -100;
 	
 	//Resistance
-	var firstResistance:int;
-	var secondResistance:int;
-	var thirdResistance:int;
-	var fourthResistance:int;
-	var fifthResistance:int;
+	var firstResistance:int = -100;
+	var secondResistance:int = -100;
+	var thirdResistance:int = -100;
+	var fourthResistance:int = -100;
+	var fifthResistance:int = -100;
 	
 	public function Type (id:int, nameOfType:String)
 	{
@@ -23,7 +23,7 @@
 		this.nameOfType = nameOfType;
 	}
 	
-	public function AddFaiblesse (faiblesse:int, place:int)
+	public function AddWeakness (faiblesse:int, place:int)
 	{
 		if (place == 0) firstFaiblesse = faiblesse;
 		if (place == 1) secondFaiblesse = faiblesse;
@@ -32,7 +32,7 @@
 		if (place == 4) fifthFaiblesse = faiblesse;
 	}
 	
-	public function RemoveFaiblesse (place:int)
+	public function RemoveWeakness (place:int)
 	{
 		if (place == 0) firstFaiblesse = -1;
 		if (place == 1) secondFaiblesse = -1;
@@ -58,9 +58,5 @@
 		if (place == 3) fourthResistance = -1;
 		if (place == 4) fifthResistance = -1;
 	}
-<<<<<<< HEAD
 	
 }
-=======
-}
->>>>>>> origin/master

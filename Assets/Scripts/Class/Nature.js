@@ -1,10 +1,10 @@
 ﻿class Nature
 {
-	var atti:float;
-	var attsi:float;
-	var defi:float;
-	var defsi:float;
-	var speedi:float;
+	var atti:float = 0;
+	var attsi:float = 0;
+	var defi:float = 0;
+	var defsi:float = 0;
+	var speedi:float = 0;
 	
 	public function Nature (att:int, atts:int, def:int, defs:int, speed:int)
 	{

@@ -1,17 +1,10 @@
-﻿class MegaItem
+﻿class MegaItem extends Item
 {
-	var nameOfItem:String;
-	var Getable:boolean;
-	var espece:Espece;
+	var espece:Espece = Espece(Type(-100, ""), Type(-100, ""), 0, 0, 0, 0, 0, 0, "Missing");
 	
-	function Item (nameOfItem:String, Getable:boolean)
+	function MegaItem (nameOfItem:String, espece:Espece)
 	{
-		this.nameOfItem = nameOfItem;
-		this.Getable = Getable;
-	}
-	
-	function Item (espece:Espece)
-	{
+		super(nameOfItem, true);
 		this.espece = espece;
 	}
 }

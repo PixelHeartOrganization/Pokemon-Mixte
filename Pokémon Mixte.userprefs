@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MonoBehaviour\Utility.js">
+    <Files>
+      <File FileName="Assets\Scripts\MonoBehaviour\StartChallenge.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MonoBehaviour\DetectTile.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MonoBehaviour\Generator.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MonoBehaviour\PNJ.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MonoBehaviour\Utility.js" Line="21" Column="30" />
+      <File FileName="Assets\Scripts\MonoBehaviour\InitClass.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MonoBehaviour\Player.js" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

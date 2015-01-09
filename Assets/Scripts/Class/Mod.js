@@ -1,6 +1,6 @@
 ﻿class Mod
 {
-	var nameOfMod:String;
+	var nameOfMod:String = "";
 	
 	public function Mod (nameOfMod:String)
 	{

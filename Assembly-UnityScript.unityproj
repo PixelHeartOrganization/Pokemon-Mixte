@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{D68EDEC9-8102-BDF6-6EAD-D6BFCF4A768B}</ProjectGuid>
+	<ProjectGuid>{8658EA79-529D-0DE0-035F-C1BA12F1BEC3}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -50,20 +50,32 @@
      <Compile Include="Assets\Scripts\Class\Espece.js" />
      <Compile Include="Assets\Scripts\Class\Item.js" />
      <Compile Include="Assets\Scripts\Class\MegaItem.js" />
+     <Compile Include="Assets\Scripts\Class\Mod.js" />
      <Compile Include="Assets\Scripts\Class\Nature.js" />
      <Compile Include="Assets\Scripts\Class\Pokemon.js" />
      <Compile Include="Assets\Scripts\Class\Talent.js" />
      <Compile Include="Assets\Scripts\Class\Type.js" />
      <Compile Include="Assets\Scripts\MonoBehaviour\AutoTyping.js" />
+     <Compile Include="Assets\Scripts\MonoBehaviour\DetectTile.js" />
      <Compile Include="Assets\Scripts\MonoBehaviour\Fight.js" />
+     <Compile Include="Assets\Scripts\MonoBehaviour\Generator.js" />
      <Compile Include="Assets\Scripts\MonoBehaviour\Grass.js" />
+     <Compile Include="Assets\Scripts\MonoBehaviour\InitClass.js" />
      <Compile Include="Assets\Scripts\MonoBehaviour\Inventory.js" />
      <Compile Include="Assets\Scripts\MonoBehaviour\Main.js" />
+     <Compile Include="Assets\Scripts\MonoBehaviour\Monuments\Battle.js" />
      <Compile Include="Assets\Scripts\MonoBehaviour\Monuments\Laboratoire.js" />
+     <Compile Include="Assets\Scripts\MonoBehaviour\PNJ.js" />
      <Compile Include="Assets\Scripts\MonoBehaviour\Player.js" />
      <Compile Include="Assets\Scripts\MonoBehaviour\PlayerInfo.js" />
+     <Compile Include="Assets\Scripts\MonoBehaviour\StartChallenge.js" />
      <Compile Include="Assets\Scripts\MonoBehaviour\Test.js" />
      <Compile Include="Assets\Scripts\MonoBehaviour\Tile.js" />
+     <Compile Include="Assets\Scripts\MonoBehaviour\Utility.js" />
+     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
+     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
+     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
+     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

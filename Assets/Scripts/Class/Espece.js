@@ -1,11 +1,11 @@
 ﻿class Espece
 {
-	var type1:Type;
-	var type2:Type;
-	var nameOfEspece:String;
+	var type1:Type = Type(-100, "");
+	var type2:Type = Type(-100, "");
+	var nameOfEspece:String = "Missing";
 	
-	var texturePath:String;
-	var objectPath:String;
+	var texturePath:String = "Assets/Textures/Espece/min/Missing.png";
+	var objectPath:String = "Assets/Models/Espece/Missing.png";
 	
 	var BPV:int;
 	var BAtt:int;

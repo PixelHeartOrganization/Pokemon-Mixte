@@ -1,4 +1,4 @@
-﻿static var boolTest:boolean;
+﻿/*static var boolTest:boolean = false;
 
 public static var Bulbasar:Espece;
 var Ivysaur:Espece;
@@ -8,10 +8,15 @@ var Charmeleon:Espece;
 var Charizard:Espece;
 public static var Erunix:Espece;
 
-var texture:Texture2D;
+var texture:Texture2D = null;
 
 static var MyPocketMonster:Pokemon;
+static var MissingNo:Pokemon;
 static var MyPocketMonster2:Pokemon;
+var MyPocketMonster3:Pokemon;
+var MyPocketMonster4:Pokemon;
+var MyPocketMonster5:Pokemon;
+var MyPocketMonster6:Pokemon;
 
 var Null:Type;
 var Grass:Type;
@@ -50,8 +55,10 @@ var Lax:Nature;
 
 var Fissure:Attak;
 
-function Start ()
+function Awake ()
 {
+	DontDestroyOnLoad(this.gameObject);
+	
 	boolTest = true;
 	InitType();
 	InitAttak();
@@ -91,11 +98,16 @@ function InitEspece ()
 
 function InitPokemon ()
 {
-	MyPocketMonster = Pokemon(Erunix, 0, 252, 0, 4, 0, 252, 31, 31, 31, 31, 31, 31, 50, "Lucas", Jolly);
+	MyPocketMonster = Pokemon(Charizard, 0, 252, 0, 4, 0, 252, 31, 31, 31, 31, 31, 31, 100, "Lucas", Jolly);
 	MyPocketMonster.AddAttak(Fissure, 50000);
 	
-	MyPocketMonster2 = Pokemon(Erunix, 0, 252, 0, 4, 0, 252, 31, 31, 31, 31, 31, 31, 50, "Lucas", Jolly);
+	MyPocketMonster2 = Pokemon(Bulbasar, 0, 252, 0, 4, 0, 252, 31, 31, 31, 31, 31, 31, 50, "Lucas", Jolly);
 	MyPocketMonster2.AddAttak(Fissure, 50000);
+	
+	MyPocketMonster3 = Pokemon(Venusar, 0, 252, 0, 4, 0, 252, 31, 31, 31, 31, 31, 31, 100, "Lucas", Jolly);
+	MyPocketMonster4 = Pokemon(Charmander, 0, 252, 0, 4, 0, 252, 31, 31, 31, 31, 31, 31, 100, "Lucas", Jolly);
+	MyPocketMonster5 = Pokemon(Ivysaur, 0, 252, 0, 4, 0, 252, 31, 31, 31, 31, 31, 31, 100, "Lucas", Jolly);
+	MyPocketMonster6 = Pokemon(Erunix, 0, 252, 0, 4, 0, 252, 31, 31, 31, 31, 31, 31, 100, "Lucas", Jolly);
 	
 	Fight.first1 = MyPocketMonster;
 	Fight.second2 = MyPocketMonster2;
@@ -103,6 +115,11 @@ function InitPokemon ()
 	MyPocketMonster.PVU = MyPocketMonster.PV/2;
 	
 	Inventory.AddPokemonInInventory(MyPocketMonster, 0);
+	Inventory.AddPokemonInInventory(MyPocketMonster2, 1);
+	Inventory.AddPokemonInInventory(MyPocketMonster3, 2);
+	Inventory.AddPokemonInInventory(MyPocketMonster4, 3);
+	Inventory.AddPokemonInInventory(MyPocketMonster5, 4);
+	Inventory.AddPokemonInInventory(MyPocketMonster6, 5);
 }
 
 function InitType ()
@@ -153,11 +170,11 @@ function InitAttak ()
 
 function OnGUI ()
 {
-	if (boolTest)
+	/*if (boolTest && MyPocketMonster != null)
 	{
 	texture = Resources.LoadAssetAtPath("Assets/Textures/Espece/min/" + MyPocketMonster.espece.nameOfEspece + ".png", Texture2D);
 	//texture = Resources.LoadAssetAtPath("Assets/Textures/Espece/battle/Forward/" + MyPocketMonster.espece.nameOfEspece + ".png", Texture2D);
 	GUI.DrawTexture(Rect(10, 10, texture.width * 2, texture.height * 2),  texture);
 	GUI.Label(Rect(75, 50, 1000, 1000), MyPocketMonster.PVU + "/" + MyPocketMonster.PV);
-	}
-}
+	}*/
+//}
