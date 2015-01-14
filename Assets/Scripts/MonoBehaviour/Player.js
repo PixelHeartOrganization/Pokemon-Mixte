@@ -16,7 +16,7 @@ private var run:boolean;
 
 function Start () {
 	controller = GetComponent("CharacterController");
-	characterContent = transform.Find("Joueur");
+	characterContent = transform.Find("Player");
 }
 
 function Update () {
@@ -40,6 +40,17 @@ function Update () {
 			moveDirection = Vector3(0, 0, Input.GetAxis("Vertical") * speed);
 			run = false;
 		}
+		
+		if (Input.GetKey(KeyCode.UpArrow))
+		{
+			if (Input.GetKey(KeyCode.LeftShift))
+			characterContent.animation.CrossFade("run");
+			
+			else
+			characterContent.animation.CrossFade("walk");
+		}
+		
+		else characterContent.animation.CrossFade("idle");
 		
 		moveDirection = Character.transform.TransformDirection(moveDirection);
 		

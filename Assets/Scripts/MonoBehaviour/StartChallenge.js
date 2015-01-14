@@ -3,7 +3,6 @@ private var bool:boolean;
 private var bool2:boolean;
 private var bool3:boolean;
 private var nameOfPerso:String = "";
-private var test:String;
 
 function Start ()
 {
